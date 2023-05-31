@@ -7,7 +7,7 @@ import { sanitizedEnv } from '../../common/env';
 import { log } from '../../common/log';
 
 const backendPath = app.isPackaged
-    ? path.join(process.resourcesPath, 'src', 'run.py')
+    ? path.join(app.getAppPath(), '..', 'src', 'run.py')
     : './backend/src/run.py';
 
 interface BaseBackendProcess {
